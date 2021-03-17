@@ -49,7 +49,7 @@ Either way JVS will need to be parsed per the spec, and converted to input suita
 [JAMMA VIDEO規格(第3版)](http://superusr.free.fr/arcade/JVS/JVST_VER3.pdf)
 
 # Service core 
-Nearly every arcade PCB in existance has a "test" / "service" menu in which various settings can be changes, and IO can be checked. 
+Nearly every arcade PCB in existance has a "test" / "service" menu in which various settings can be changed, and I/O can be checked. 
 
 ## IO test core
 The Sega Naomi JVS IO test menu needs to be recreated as a basic core used to spot check for improperly connected, or stuck buttons or sticks on arcade control panels. 
