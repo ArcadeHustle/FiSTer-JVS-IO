@@ -51,7 +51,11 @@ Either way JVS will need to be parsed per the spec, and converted to input suita
 ## OpenJVS JVSCore
 [![OpenJVS Discord](https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/openjvs.jpg)](https://discord.com/invite/aJAR9N2)<br>
 
-In theory Bobby Dilly's [JVSCore](https://github.com/bobbydilley/JVSCore/blob/master/src/input.c#L40) could be used to present MiSTer with a compatible joystick via [/dev/uinput](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp#L1307). Minimal system modification would be required. 
+In theory Bobby Dilly's [JVSCore](https://github.com/bobbydilley/JVSCore/blob/master/src/input.c#L40) could be used to present MiSTer with a compatible joystick via [/dev/uinput](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp#L1307). Minimal system modification would be required. They should simply mate right up. 
+<p align="center">
+<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/mating.jpg">
+</p>
+ 
 
 # Service core 
 Nearly every arcade PCB in existance has a "test" / "service" menu in which various settings can be changed, and I/O can be checked. 
