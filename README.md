@@ -58,7 +58,7 @@ The Sega Naomi JVS IO test menu needs to be recreated as a basic core used to sp
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/iotest.jpg">
 
 ## Coin
-Similarly in the service menu most arcade PCBs have a coin setting that allows for free-play. It would be great to mimic this setting and flip the necessary bits to place arcade cores into free-play when they are eventually able to access the JVS via SNAC.
+Similarly in the service menu most arcade PCBs have a coin setting that allows for free-play. It would be great to mimic this setting and flip the necessary bits to place arcade cores into free-play when they are eventually able to access the JVS protocol via SNAC.
 
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/coin.jpg">
 
