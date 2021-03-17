@@ -17,7 +17,7 @@ Althought it may be intuitive to ensure that all "arcade" cores support JVS via 
 
 FiSTer-JVS-IO will need to be compatible with the standard [MiSTer IO-Board](https://github.com/MiSTer-devel/Main_MiSTer/wiki/IO-Board) in order to make use of the 3.5mm audio, and VGA outputs. This could change in the future as the project becomes less dependent on the exiting landscape. 
 
-Existing MiSTer DB9 support is done via standard RS232 signaling, which triggers the need for an adapter for 5 volt logic. The [Accessory converter](https://github.com/blue212/SNAC) by Blue212 serves this purpose. JVS is based on RS485 so it will require a similar level shift from 3v to 5v.
+Existing MiSTer DB9 support is done via standard RS232 signaling, which triggers the need for an adapter for 5 volt logic. The [Accessory converter](https://github.com/blue212/SNAC) by Blue212 serves this purpose. JVS is based on RS485 so it will require a similar level shift from 3v to 5v.<br>
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/rs232_rs485.jpg">
 
 We are familiar with using either a Maxim MAX485, or a MaxLinear SP485 for the task of converting RS485 to RS232 signaling that MiSTer can hopefully handle via SNAC with minor code changes.  
