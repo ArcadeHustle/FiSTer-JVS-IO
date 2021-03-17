@@ -16,7 +16,7 @@ Althought it may be intuitive to ensure that all "arcade" cores support JVS via 
 "Supporting cores (SNES, Genesis, NES, and TG16) allow to directly connect original controllers", could be applied to JVS support, and in essence make any JVS capable arcade platform an "original controller". The Sega Net City, and Naomi Universal line are perfect examples of JVS cabinets. Taito Viewlix, and clone Chewlix would be another potential candidate
 
 <p align="center">
-<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/netcity.jpg"><img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/viewlix.jpg">
+<img width="200" height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/netcity.jpg"><img width="200" height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/viewlix.jpg">
 </p>
 
 FiSTer-JVS-IO will need to be compatible with the standard [MiSTer IO-Board](https://github.com/MiSTer-devel/Main_MiSTer/wiki/IO-Board) in order to make use of the 3.5mm audio, and VGA outputs. This could change in the future as the project becomes less dependent on the exiting landscape. 
