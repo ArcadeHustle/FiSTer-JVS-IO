@@ -5,19 +5,19 @@ JVS IO for MiSTer
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/fist.jpg">
 </p>
 
-[MiSTer] (https://github.com/MiSTer-devel/Main_MiSTer/wiki) is in need of proper arcade support via JVS. 
+[MiSTer](https://github.com/MiSTer-devel/Main_MiSTer/wiki) is in need of proper arcade support via JVS. 
 
 [SNAC](https://github.com/MiSTer-devel/Main_MiSTer/wiki/User-Port-(Serial-IO)) seems completely up to the task, however odd lines in the development sandbox prevent SNAC from having full access to MiSTer's menuing system. 
-One approach would be to make use of a patched user_io subsystem as mentioned in the Atari-Forum thread ["How to use the menu with SNAC controllers and other USER_IO controller solutions"] (https://www.atari-forum.com/viewtopic.php?t=38453).
+One approach would be to make use of a patched user_io subsystem as mentioned in the Atari-Forum thread ["How to use the menu with SNAC controllers and other USER_IO controller solutions"](https://www.atari-forum.com/viewtopic.php?t=38453).
 
-This approach will require yet another fork to be maintained due to staunch development guidelines for "official" cores. Full support of each core will also require SNAC integration. Antonio Villena's [MiSTer_DB9](https://github.com/antoniovillena/MiSTer_DB9) has already addressed these same issues in it's [environment] (https://github.com/MiSTer-DB9/Forks_MiSTer/blob/35b7b7f3831a526fb9c18ab31eb29a61545fb18b/fork_ci_template/README%20DB9%20Support.md). Viewing the [intial import](https://github.com/MiSTer-DB9/Main_MiSTer/pull/1/files) gives a better idea of what is required to modify the core of MiSTer to potentially support JVS.
+This approach will require yet another fork to be maintained due to staunch development guidelines for "official" cores. Full support of each core will also require SNAC integration. Antonio Villena's [MiSTer_DB9](https://github.com/antoniovillena/MiSTer_DB9) has already addressed these same issues in it's [environment](https://github.com/MiSTer-DB9/Forks_MiSTer/blob/35b7b7f3831a526fb9c18ab31eb29a61545fb18b/fork_ci_template/README%20DB9%20Support.md). Viewing the [intial import](https://github.com/MiSTer-DB9/Main_MiSTer/pull/1/files) gives a better idea of what is required to modify the core of MiSTer to potentially support JVS.
 
 Althought it may be intuitive to ensure that all "arcade" cores support JVS via SNAC, the task will be monumental. To start we would be more than happy to simply have the existing SNAC [supported cores](https://github.com/MiSTer-devel/Main_MiSTer/wiki/Frequently-Asked-Questions#what-are-the-methods-for-connecting-controllers-to-the-serial-port-of-the-io-add-on-board) to be functional. 
 "Supporting cores (SNES, Genesis, NES, and TG16) allow to directly connect original controllers", could be applied to JVS support, and in essence make any JVS capable arcade platform an "original controller". 
 
-FiSTer-JVS-IO will need to be compatible with the standard [MiSTer IO-Board] (https://github.com/MiSTer-devel/Main_MiSTer/wiki/IO-Board) in order to make use of the 3.5mm audio, and VGA outputs. This could change in the future as the project becomes less dependent on the exiting landscape. 
+FiSTer-JVS-IO will need to be compatible with the standard [MiSTer IO-Board](https://github.com/MiSTer-devel/Main_MiSTer/wiki/IO-Board) in order to make use of the 3.5mm audio, and VGA outputs. This could change in the future as the project becomes less dependent on the exiting landscape. 
 
-Existing DB9 support is done via standard RS232 signaling, which triggers the need for an adapter for 5 volt logic. The [Accessory converter] (https://github.com/blue212/SNAC) by Blue212 serves this purpose. JVS is based on RS485 so it will require a similar level shift from 3v to 5v.
+Existing DB9 support is done via standard RS232 signaling, which triggers the need for an adapter for 5 volt logic. The [Accessory converter](https://github.com/blue212/SNAC) by Blue212 serves this purpose. JVS is based on RS485 so it will require a similar level shift from 3v to 5v.
 <p align="center">
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/rs232_rs485.jpg">
 </p>
@@ -41,7 +41,7 @@ RS485 to RS232 (USB)
 https://www.amazon.com/gp/product/B078X5H8H7/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
 
 Either way JVS will need to be parsed per the spec, and converted to input suitable for MiSTer:
-[JAMMA Video Standard (JVS) Third Edition] (http://daifukkat.su/files/jvs_wip.pdf)
+[JAMMA Video Standard (JVS) Third Edition](http://daifukkat.su/files/jvs_wip.pdf)
 [JAMMA VIDEO規格(第3版)](http://superusr.free.fr/arcade/JVS/JVST_VER3.pdf)
 
 # Service core 
