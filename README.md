@@ -37,11 +37,11 @@ http://www.wch-ic.com/products/CH9328.html<br>
 http://www.wch.cn/downloads/file/224.html
 
 
-Two commercial products give us a chance to play with this theory of operations. 
-RS485 to HID
-https://www.amazon.com/RS485-Serial-Keyboard-Protocol-CH9328/dp/B083XR42KT
+Two commercial products give us a chance to play with this theory of operations.<br>
+RS485 to HID:<br>
+https://www.amazon.com/RS485-Serial-Keyboard-Protocol-CH9328/dp/B083XR42KT<br>
 
-RS485 to RS232 (USB)
+RS485 to RS232 (USB)<br>
 https://www.amazon.com/gp/product/B078X5H8H7/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
 
 Either way JVS will need to be parsed per the spec, and converted to input suitable for MiSTer:<br>
