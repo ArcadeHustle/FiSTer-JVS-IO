@@ -13,7 +13,11 @@ One approach would be to make use of a patched user_io subsystem as mentioned in
 This approach will require yet another fork to be maintained due to staunch development guidelines for "official" cores. Full support of each core will also require SNAC integration. Antonio Villena's [MiSTer_DB9](https://github.com/antoniovillena/MiSTer_DB9) has already addressed these same issues in it's [environment](https://github.com/MiSTer-DB9/Forks_MiSTer/blob/35b7b7f3831a526fb9c18ab31eb29a61545fb18b/fork_ci_template/README%20DB9%20Support.md). Viewing the [initial import](https://github.com/MiSTer-DB9/Main_MiSTer/pull/1/files) of Antonio Villena's DB9 work gives a better idea of what is required to modify the core of MiSTer to potentially support JVS.
 
 Althought it may be intuitive to ensure that all "arcade" cores support JVS via SNAC, the task will be monumental. To start we would be more than happy to simply have the existing SNAC [supported cores](https://github.com/MiSTer-devel/Main_MiSTer/wiki/Frequently-Asked-Questions#what-are-the-methods-for-connecting-controllers-to-the-serial-port-of-the-io-add-on-board) to be functional. 
-"Supporting cores (SNES, Genesis, NES, and TG16) allow to directly connect original controllers", could be applied to JVS support, and in essence make any JVS capable arcade platform an "original controller". 
+"Supporting cores (SNES, Genesis, NES, and TG16) allow to directly connect original controllers", could be applied to JVS support, and in essence make any JVS capable arcade platform an "original controller". The Sega Net City, and Naomi Universal line are perfect examples of JVS cabinets.
+
+<p align="center">
+<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/netcity.jpg">
+</p>
 
 FiSTer-JVS-IO will need to be compatible with the standard [MiSTer IO-Board](https://github.com/MiSTer-devel/Main_MiSTer/wiki/IO-Board) in order to make use of the 3.5mm audio, and VGA outputs. This could change in the future as the project becomes less dependent on the exiting landscape. 
 
