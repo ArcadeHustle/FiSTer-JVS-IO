@@ -48,7 +48,13 @@ Either way JVS will need to be parsed per the spec, and converted to input suita
 [JAMMA Video Standard (JVS) Third Edition](http://daifukkat.su/files/jvs_wip.pdf)<br>
 [JAMMA VIDEO規格(第3版)](http://superusr.free.fr/arcade/JVS/JVST_VER3.pdf)
 
-## [OpenJVS](https://discord.com/invite/aJAR9N2) JVSCore
+## OpenJVS JVSCore
+
+[OpenJVS Discord](https://discord.com/invite/aJAR9N2) 
+<p align="center">
+<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/openjvs.jpg">
+</p>
+
 In theory Bobby Dilly's [JVSCore](https://github.com/bobbydilley/JVSCore/blob/master/src/input.c#L40) could be used to present MiSTer with a compatible joystick via [/dev/uinput](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp#L1307). Minimal system modification would be required. 
 
 # Service core 
