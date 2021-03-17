@@ -52,7 +52,7 @@ Either way JVS will need to be parsed per the spec, and converted to input suita
 Nearly every arcade PCB in existance has a "test" / "service" menu in which various settings can be changed, and I/O can be checked. 
 
 ## IO test core
-The Sega Naomi JVS IO test menu needs to be recreated as a basic core used to spot check for improperly connected, or stuck buttons or sticks on arcade control panels. 
+The Sega Naomi JVS IO test menu needs to be recreated as a basic core used to spot check for improperly connected, or stuck buttons or sticks on arcade control panels being used as input devices for MiSTer. 
 
 <p align="center">
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/iotest.jpg">
