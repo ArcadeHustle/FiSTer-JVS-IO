@@ -27,13 +27,13 @@ Existing MiSTer DB9 support is done via standard RS232 signaling, which triggers
 </p>
 
 We are familiar with using either a Maxim MAX485, or a MaxLinear SP485 for the task of converting RS485 to RS232 signaling that MiSTer can hopefully handle via SNAC with minor code changes.  
-https://datasheets.maximintegrated.com/en/ds/MAX1487-MAX491.pdf
+https://datasheets.maximintegrated.com/en/ds/MAX1487-MAX491.pdf<br>
 https://www.maxlinear.com/ds/sp483-sp485.pdf
 
 Converting directly to HID keyboard output is another potential option. At the very least [Input.cpp](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp) from Main_MiSTer would need to be patched to parse JVS frames using their start/stop bits. 
 The WCH CH9328 is suitable for getting input to MiSTer, in this case from RS485, to HID. 
-http://www.wch.cn/product/ch9328.html
-http://www.wch-ic.com/products/CH9328.html
+http://www.wch.cn/product/ch9328.html<br>
+http://www.wch-ic.com/products/CH9328.html<br>
 http://www.wch.cn/downloads/file/224.html
 
 
@@ -44,8 +44,8 @@ https://www.amazon.com/RS485-Serial-Keyboard-Protocol-CH9328/dp/B083XR42KT
 RS485 to RS232 (USB)
 https://www.amazon.com/gp/product/B078X5H8H7/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
 
-Either way JVS will need to be parsed per the spec, and converted to input suitable for MiSTer:
-[JAMMA Video Standard (JVS) Third Edition](http://daifukkat.su/files/jvs_wip.pdf)
+Either way JVS will need to be parsed per the spec, and converted to input suitable for MiSTer:<br>
+[JAMMA Video Standard (JVS) Third Edition](http://daifukkat.su/files/jvs_wip.pdf)<br>
 [JAMMA VIDEO規格(第3版)](http://superusr.free.fr/arcade/JVS/JVST_VER3.pdf)
 
 # Service core 
