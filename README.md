@@ -41,16 +41,16 @@ Perhaps the easiest option is to make use of an RS485 to RS232 board with a buil
 
 Three commercial products give us a chance to play with this theory of JVS operations alongside MiSTer.<br>
 
+SNAC to USB:<br>
+https://github.com/blue212/SNAC/blob/master/snac/snac-usb_partlist.txt<br>
+https://github.com/blue212/SNAC/tree/master/snac/gerbers/snac_usb3<br>
+https://misterfpga.co.uk/product/snac-serial-native-accessory-converter-usb3-version-bare-pcb/<br>
+
 RS485 to HID:<br>
 https://www.amazon.com/RS485-Serial-Keyboard-Protocol-CH9328/dp/B083XR42KT<br>
 
 RS485 to RS232:<br>
 https://www.amazon.com/gp/product/B078X5H8H7/<br>
-
-SNAC to USB:<br>
-https://github.com/blue212/SNAC/blob/master/snac/snac-usb_partlist.txt<br>
-https://github.com/blue212/SNAC/tree/master/snac/gerbers/snac_usb3<br>
-https://misterfpga.co.uk/product/snac-serial-native-accessory-converter-usb3-version-bare-pcb/<br>
 
 ## Verified OpenJVS Support
 [![OpenJVS Discord](https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/openjvs.jpg)](https://discord.com/invite/aJAR9N2)<br>
