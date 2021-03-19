@@ -11,7 +11,7 @@ FiSTer-JVS-IO will need to be compatible with the standard [MiSTer IO-Board](htt
 Current MiSTer DB9 support is done via standard RS232 signaling, which triggers the need for an adapter for 5 volt logic. The [Accessory converter](https://github.com/blue212/SNAC) by Blue212 serves this purpose. JVS is based on RS485 so it will require a similar level shift from 3v to 5v if we make use of the User IO port.<br>
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/rs232_rs485.jpg">
 
-We are familiar with using either a Maxim MAX485, or a MaxLinear SP485 for the task of converting RS485 to RS232 signaling that MiSTer can hopefully handle via SNAC with minor code changes.  
+We are familiar with using either a Maxim MAX485, or a MaxLinear SP485 for the task of converting RS485 to RS232 signaling. In this form MiSTer can hopefully handle JVS via SNAC with minor code changes.  
 https://datasheets.maximintegrated.com/en/ds/MAX1487-MAX491.pdf<br>
 https://www.maxlinear.com/ds/sp483-sp485.pdf
 
