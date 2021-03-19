@@ -39,6 +39,7 @@ Perhaps the easiest option is to make use of an RS284 to RS232 board with a buil
 
 ## What do I buy to help out with development!? 
 Three commercial products give us a chance to play with this theory of JVS operations alongside MiSTer<br>
+
 RS485 to HID:<br>
 https://www.amazon.com/RS485-Serial-Keyboard-Protocol-CH9328/dp/B083XR42KT<br>
 
