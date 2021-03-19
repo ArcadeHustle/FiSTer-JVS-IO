@@ -28,7 +28,7 @@ The wording "Supporting cores (SNES, Genesis, NES, and TG16) allow to directly c
 
 ### RS485 to HID
 Converting directly to HID keyboard output is a potential option. At the very least [Input.cpp](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp) from Main_MiSTer would need to be patched to parse JVS frames using their start/stop bits. Building a new parser may not be trivial, but is certainly possible. 
-The WCH CH9328 is a suitable hardware choice for getting input to MiSTer, in this case from RS485, to HID. 
+The WCH CH9328 is a suitable hardware choice for getting input to MiSTer, in this case from RS485, to HID.<br>
 http://www.wch.cn/product/ch9328.html<br>
 http://www.wch-ic.com/products/CH9328.html<br>
 http://www.wch.cn/downloads/file/224.html
