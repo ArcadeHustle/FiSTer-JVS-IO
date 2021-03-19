@@ -38,7 +38,8 @@ Perhaps the easiest option is to make use of an RS284 to RS232 board with a buil
 [![Poor Mans JVS](http://img.youtube.com/vi/kqXEYtvGzno/0.jpg)](https://www.youtube.com/watch?v=kqXEYtvGzno)<br>
 
 ## What do I buy to help out with development!? 
-Three commercial products give us a chance to play with this theory of JVS operations alongside MiSTer<br>
+
+Three commercial products give us a chance to play with this theory of JVS operations alongside MiSTer.<br>
 
 RS485 to HID:<br>
 https://www.amazon.com/RS485-Serial-Keyboard-Protocol-CH9328/dp/B083XR42KT<br>
@@ -52,20 +53,22 @@ https://github.com/blue212/SNAC/tree/master/snac/gerbers/snac_usb3<br>
 https://misterfpga.co.uk/product/snac-serial-native-accessory-converter-usb3-version-bare-pcb/<br>
 
 ## Verified OpenJVS Support
+[![OpenJVS Discord](https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/openjvs.jpg)](https://discord.com/invite/aJAR9N2)<br>
 
 Either way JVS will need to be parsed per the spec, and converted to input suitable for MiSTer:<br>
 [JAMMA Video Standard (JVS) Third Edition](http://daifukkat.su/files/jvs_wip.pdf)<br>
 [JAMMA VIDEO規格(第3版)](http://superusr.free.fr/arcade/JVS/JVST_VER3.pdf)
 
-[![OpenJVS Discord](https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/openjvs.jpg)](https://discord.com/invite/aJAR9N2)<br>
-
-Our theory was that Bobby Dilly's [JVSCore](https://github.com/bobbydilley/JVSCore/blob/master/src/input.c#L40) could be used to present MiSTer with a compatible joystick via [/dev/uinput](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp#L1307). Minimal system modification would be required. The OpenJVS /dev/uinput implementation should simply mate right up with MiSTer's Input.cpp.<br>
+Our theory was that Bobby Dilly's [JVSCore](https://github.com/bobbydilley/JVSCore/blob/master/src/input.c#L40) could be used to present MiSTer with a compatible joystick via [/dev/uinput](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp#L1307), and that minimal system modification would be required. The OpenJVS /dev/uinput implementation should simply mate right up with MiSTer's Input.cpp.<br>
 <img img width="400" height="323" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/mating.jpg">
  
-We were right! And it did, it pretty well worked out the box our first try. We need to nail down some input mapping issues, and it will be ready for mainstream. We have confirmed to be able to support a standard Sega control panel with 2 players and 6 buttons each side. 
-<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/openjvs.jpg">
+We were right, and it did, it pretty well worked out the box our first try! We need to nail down some input mapping issues, and it will be ready for mainstream. We have confirmed to be able to support a standard Sega control panel with 2 players and 6 buttons each side.<br>
+<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/jvscore.jpg">
 
-# Service core 
+# What's next? 
+How do we mature the MiSTer landscape further for arcade use? What do we need? 
+
+## Service core 
 Nearly every arcade PCB in existance has a "test" / "service" menu in which various settings can be changed, and I/O can be checked. 
 
 ## IO test core
@@ -73,7 +76,7 @@ The Sega Naomi JVS IO test menu needs to be recreated as a basic core used to sp
 
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/iotest.jpg">
 
-## Coin
+## Coin settings
 Similarly in the service menu most arcade PCBs have a coin setting that allows for free-play. It would be great to mimic this setting and flip the necessary bits to place arcade cores into free-play when they are eventually able to access the JVS protocol via SNAC.
 
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/coin.jpg">
