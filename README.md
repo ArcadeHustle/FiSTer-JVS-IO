@@ -27,14 +27,14 @@ The wording "Supporting cores (SNES, Genesis, NES, and TG16) allow to directly c
 <img width="200" height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/netcity.jpg"><img width="200" height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/viewlix.jpg">
 
 ### RS485 to HID
-Converting directly to HID keyboard output is another potential option. At the very least [Input.cpp](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp) from Main_MiSTer would need to be patched to parse JVS frames using their start/stop bits. 
-The WCH CH9328 is suitable for getting input to MiSTer, in this case from RS485, to HID. 
+Converting directly to HID keyboard output is a potential option. At the very least [Input.cpp](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp) from Main_MiSTer would need to be patched to parse JVS frames using their start/stop bits. Building a new parser may not be trivial, but is certainly possible. 
+The WCH CH9328 is a suitable hardware choice for getting input to MiSTer, in this case from RS485, to HID. 
 http://www.wch.cn/product/ch9328.html<br>
 http://www.wch-ic.com/products/CH9328.html<br>
 http://www.wch.cn/downloads/file/224.html
 
 ### RS485 to UART
-Perhaps the easiest option is to make use of a RS284 to RS232 board with a built in USB bridge, as folks have done for years with bootleg Taito X2, and X3 machines. 
+Perhaps the easiest option is to make use of an RS284 to RS232 board with a built in USB bridge, as folks have done for years with bootleg Taito X2, and X3 machines. 
 [![Poor Mans JVS](http://img.youtube.com/vi/kqXEYtvGzno/0.jpg)](https://www.youtube.com/watch?v=kqXEYtvGzno)<br>
 
 ## What do I buy to help out with development!? 
