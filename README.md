@@ -1,7 +1,7 @@
 # FiSTer-JVS-IO 
 #### A project to enable JVS IO support for MiSTer FPGA *family*
 
-<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/fist.jpg">
+<img height="200" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/fist.jpg">
 
 Now that the community is addressing JAMMA input, [MiSTer FPGA](https://github.com/MiSTer-devel/Main_MiSTer/wiki) is in need of proper arcade support via JVS. 
 
