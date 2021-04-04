@@ -26,6 +26,21 @@ The wording "Supporting cores (SNES, Genesis, NES, and TG16) allow to directly c
 
 <img width="200" height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/netcity.jpg"><img width="200" height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/viewlix.jpg">
 
+####
+
+In examining Antonio's IO-2-DB9 example we can see all the elements we need to make an RS485 add on board.  
+https://github.com/antoniovillena/MiSTer_DB9/blob/master/Hardware/io2db9.brd
+https://github.com/antoniovillena/MiSTer_DB9/blob/master/Hardware/io2db9.sch
+
+You can clearly see that Serial 0, and Serial 1 are represented by pins AH9+AG11, and AF13+AG13
+<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/io2db9.png"><br>
+<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/userio.png"><br>
+
+These pin names in turn correspond with an Arduino pin map. For example Arduino_IO14 is PIN_AH9, aka USER_IO[1], or D- on the SNAC USB board!
+<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/pinout.png"><br>
+<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/snacusb.png"><br>
+
+
 ### RS485 to HID
 Converting directly to HID keyboard output is a potential option. At the very least [Input.cpp](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp) from Main_MiSTer would need to be patched to parse JVS frames using their start/stop bits. Building a new parser may not be trivial, but is certainly possible. 
 The WCH CH9328 is a suitable hardware choice for getting input to MiSTer, in this case from RS485, to HID.<br>
