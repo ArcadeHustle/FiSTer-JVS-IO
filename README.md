@@ -42,9 +42,11 @@ These pin names in turn correspond with an Arduino pin map. For example Arduino_
 
 [Examples:](https://misterfpga.org/viewtopic.php?t=1528)
 ```
-Arduino_IO13 AH12 USER_IO[2]
-Arduino_IO14 AH9 USER_IO[1]
-Arduino_IO15 AG11 USER_IO[0]
+Arduino_IO15 AG11  USER_IO[0]
+Arduino_IO14 AH9   USER_IO[1]
+Arduino_IO13 AH12  USER_IO[2]
+...
+Arduino_IO8 AF17   USER_IO[6]
 ```
 
 ### RS485 to HID
