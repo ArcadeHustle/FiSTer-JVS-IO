@@ -40,6 +40,12 @@ These pin names in turn correspond with an Arduino pin map. For example Arduino_
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/pinout.png"><br>
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/snacusb.png"><br>
 
+[Examples:](https://misterfpga.org/viewtopic.php?t=1528)
+```
+Arduino_IO13 AH12 USER_IO[2]
+Arduino_IO14 AH9 USER_IO[1]
+Arduino_IO15 AG11 USER_IO[0]
+```
 
 ### RS485 to HID
 Converting directly to HID keyboard output is a potential option. At the very least [Input.cpp](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp) from Main_MiSTer would need to be patched to parse JVS frames using their start/stop bits. Building a new parser may not be trivial, but is certainly possible. 
