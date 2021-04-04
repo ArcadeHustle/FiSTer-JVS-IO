@@ -37,8 +37,7 @@ You can clearly see that Serial 0, and Serial 1 are represented by pins AH9+AG11
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/userio.png"><br>
 
 These pin names in turn correspond with an Arduino pin map. For example Arduino_IO14 is PIN_AH9, aka USER_IO[1], or D- on the SNAC USB board!
-<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/pinout.png"><br>
-<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/snacusb.png"><br>
+<img height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/pinout.png"><img height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/snacusb.png"><br>
 
 [Examples:](https://misterfpga.org/viewtopic.php?t=1528)
 ```
