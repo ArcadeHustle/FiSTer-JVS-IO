@@ -1,8 +1,22 @@
 # FiSTer-JVS-IO 
-#### A project to enable JVS IO support for MiSTer FPGA *family*
 
 <img height="200" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/fist.jpg"><br>
 
+- [FiSTer-JVS-IO](#fister-jvs-io)
+      - [A project to enable JVS IO support for MiSTer FPGA *family*](#a-project-to-enable-jvs-io-support-for-mister-fpga--family-)
+    + [RS485 hardware options for JVS Support integration](#rs485-hardware-options-for-jvs-support-integration)
+    + [Serial Native Accessory Converter via User Port (Serial IO)](#serial-native-accessory-converter-via-user-port--serial-io-)
+      - [add-on](#add-on)
+    + [RS485 to HID](#rs485-to-hid)
+    + [RS485 to UART](#rs485-to-uart)
+  * [What do I buy to help out with development!?](#what-do-i-buy-to-help-out-with-development--)
+  * [Verified OpenJVS Support](#verified-openjvs-support)
+- [What's next?](#what-s-next-)
+  * [Service core](#service-core)
+  * [IO test core](#io-test-core)
+  * [Coin settings](#coin-settings)
+
+#### A project to enable JVS IO support for MiSTer FPGA *family*
 Now that the community is addressing JAMMA input, [MiSTer FPGA](https://github.com/MiSTer-devel/Main_MiSTer/wiki) is in need of proper arcade support via JVS. 
 
 ### RS485 hardware options for JVS Support integration
@@ -26,7 +40,7 @@ The wording "Supporting cores (SNES, Genesis, NES, and TG16) allow to directly c
 
 <img width="200" height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/netcity.jpg"><img width="200" height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/viewlix.jpg">
 
-####
+#### add-on
 
 In examining Antonio's IO-2-DB9 example we can see all the elements we need to make an RS485 add on board.  
 https://github.com/antoniovillena/MiSTer_DB9/blob/master/Hardware/io2db9.brd
