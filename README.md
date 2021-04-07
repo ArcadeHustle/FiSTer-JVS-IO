@@ -92,6 +92,9 @@ https://www.amazon.com/gp/product/B078X5H8H7/<br>
 RS485 breakout:<br>
 https://www.sparkfun.com/products/10124<br>
 
+USB 3.1 Type A Male Plug Breakout Board:<br>
+https://www.amazon.com/gp/product/B01MRK0REP/<br>
+
 ## Verified OpenJVS Support
 [![OpenJVS Discord](https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/openjvs.jpg)](https://discord.com/invite/aJAR9N2)<br>
 
