@@ -63,6 +63,13 @@ Arduino_IO13 AH12  USER_IO[2]
 Arduino_IO8 AF17   USER_IO[6]
 ```
 
+The connection flow appears to be as follows (confirmation needed):
+```
+[MiSTer]                  [RS485 IC]              [USB3 TypeA] 
+AG11 USERIO[0] (3.3v) <-> RO (UART_RX, JVS A) <-> Data- (Green) <->
+AH9  USERIO[1] (3.3v) <-> DI (UART_TX, JVS B) <-> Data+ (White) <-> 
+```
+
 ### RS485 to HID
 Converting directly to HID keyboard output is a potential option. At the very least [Input.cpp](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp) from Main_MiSTer would need to be patched to parse JVS frames using their start/stop bits. Building a new parser may not be trivial, but is certainly possible. 
 The WCH CH9328 is a suitable hardware choice for getting input to MiSTer, in this case from RS485, to HID.<br>
