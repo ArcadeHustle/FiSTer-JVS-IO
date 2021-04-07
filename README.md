@@ -65,9 +65,10 @@ Arduino_IO8 AF17   USER_IO[6]
 
 The connection flow appears to be as follows (confirmation needed):
 ```
-[MiSTer]                  [RS485 IC]              [USB3 TypeA] 
-AG11 USERIO[0] (3.3v) <-> RO (UART_RX, JVS A) <-> Data- (Green) <->
-AH9  USERIO[1] (3.3v) <-> DI (UART_TX, JVS B) <-> Data+ (White) <-> 
+[MiSTer]                  [RS485 IC]              [USB3 TypeA]      [Sega 837-13551 JVS IO]
+AG11 USERIO[0] (3.3v) <-> RO (UART_RX, JVS A) <-> Data+ (Pin 3) <-> A+  (Green)
+AH9  USERIO[1] (3.3v) <-> DI (UART_TX, JVS B) <-> Data- (Pin 2) <-> B-  (White)
+GND		      <-> GND                 <-> GND   (Pin 7  <-> GND (Black)
 ```
 
 ### RS485 to HID
