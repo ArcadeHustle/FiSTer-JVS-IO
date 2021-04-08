@@ -113,7 +113,7 @@ Either way JVS will need to be parsed per the spec, and converted to input suita
 Our theory was that Bobby Dilly's [JVSCore](https://github.com/bobbydilley/JVSCore/blob/master/src/input.c#L40) could be used to present MiSTer with a compatible joystick via [/dev/uinput](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp#L1307), and that minimal system modification would be required. The OpenJVS /dev/uinput implementation should simply mate right up with MiSTer's Input.cpp.<br>
 <img img width="400" height="323" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/mating.jpg">
  
-We were right, and it did, it pretty well worked out the box our first try! We need to nail down some input mapping issues, and it will be ready for mainstream. We have confirmed to be able to support a standard Sega control panel with 2 players and 6 buttons each side.<br>
+We were right, and it did, it pretty well worked out the box our first try! We only needed to nail down some input mapping issues. It is technically ready for mainstream, but we need to wait for some other things to cook first. We have confirmed to be able to support a standard Sega control panel with 2 players and 6 buttons each side.<br>
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/jvscore.jpg">
 
 # What's next? 
