@@ -1,0 +1,20 @@
+Double FiSTer - JVS Shield for Mi* FPGA
+
+Audio Out - RCAs x 2
+          - 3.5mm Headphone x 2
+
+Video Out - VGA x 2
+
+USB Hub - Hardwired CP2102 + RS485 transceiver + USB Type A female port (JVS) x 2
+        - Hardwires CP2102 + RS485 transceiver + ATmega328 (Programmable JVS packet injection for coin up)
+        - USB Type A female port (USB accessories) x 2 
+
+User I/O - Reset button only
+         - remove OSD / User button
+
+External I/O - Remove external buttons headers
+             - Remove external LED headers
+             - No volume control
+             - No User Port, no SNAC HDMI
+
+Fan
