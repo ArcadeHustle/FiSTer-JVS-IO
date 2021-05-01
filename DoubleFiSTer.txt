@@ -6,7 +6,7 @@ Audio Out - RCAs x 2
 Video Out - VGA x 2
 
 USB Hub - Hardwired CP2102 + RS485 transceiver + USB Type A female port (JVS) x 2
-        - Hardwires CP2102 + RS485 transceiver + ATmega328 (Programmable JVS packet injection for coin up)
+        - Hardwires CP2102 + ATmega328 (Programmable JVS packet injection for coin up)
         - USB Type A female port (USB accessories) x 2 
 
 User I/O - Reset button only
