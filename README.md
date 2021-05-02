@@ -50,13 +50,13 @@ We were right, and it did, it pretty well worked out the box our first try! We o
 # What's next? 
 How do we mature the MiSTer landscape further for arcade use? What do we need? Well we obviously couldn't stop with the progress we made above. We needed something better than the generic USB RS485 adapter that we were currently using. Many of the theoretical design discussions have been tamped down, and in turn solidified into a final design [concept](https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/DoubleFiSTer.txt).
 
-Enter the DoubleFister, a single IO board with the intent of supporting two JVS arcade cabinets for simultaneous play. It will feature dual VGA, 3.5mm, and RCA outputs, dual JVS input, and a scriptable JVS injection button. (used to manually coin up) <br>
+Enter the DoubleFister, a single IO board with the intent of supporting two JVS arcade cabinets for simultaneous play. It will feature dual VGA, 3.5mm, and RCA outputs, dual JVS input, and a scriptable JVS injection button. (used to manually coin up, for now!) <br>
 
 <img width="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/Teasers/Two.png"><br>
 <img width="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/Teasers/One.png"><br>
 <img width="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/Teasers/Three.png"><br>
 
-Once we complete the testing phases, we will push for some software additions as well.
+Once we complete the hardware testing phases, we will push for some software additions as well. If you would like to be a beta tester, please contact @d0tslash, or @fsckewe, or @JaviRodasG via Twitter. 
 
 ## Service core 
 Nearly every arcade PCB in existance has a "test" / "service" menu in which various settings can be changed, and I/O can be checked. 
