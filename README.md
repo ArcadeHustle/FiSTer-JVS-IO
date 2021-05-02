@@ -6,7 +6,7 @@
   * [A project to enable JVS IO support for MiSTer FPGA *family*](#a-project-to-enable-jvs-io-support-for-mister-fpga--family-)
   * [RS485 hardware for JVS Support integration](#rs485-hardware-for-jvs-support-integration)
   * [Verified OpenJVS Support](#verified-openjvs-support)
-- [What's next?](#what-s-next-)
+- [What's next?](#whats-next)
   * [Service core](#service-core)
   * [IO test core](#io-test-core)
   * [Coin settings](#coin-settings)
