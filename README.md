@@ -11,7 +11,7 @@
   * [IO test core](#io-test-core)
   * [Coin settings](#coin-settings)
 
-#### A project to enable JVS IO support for MiSTer FPGA *family*
+## A project to enable JVS IO support for MiSTer FPGA *family*
 Now that the community is addressing JAMMA input, [MiSTer FPGA](https://github.com/MiSTer-devel/Main_MiSTer/wiki) is in need of proper arcade support via [JVS](https://wiki.arcadeotaku.com/w/JVS). If you are here searcing for MiSTercade or JAMMA info, you are in the wrong place. Please see [MiSTercade review by MAVProxyUser](https://github.com/MAVProxyUser/MiSTercade-Review), a candid review of MiSTercade hardware in MiSTer landscape.br>
 
 The Sega Net City, and Naomi Universal line are perfect examples of JVS cabinets. Taito Viewlix, and Chewlix clones would be another example of potential candidate JVS "controllers".<br>
@@ -29,7 +29,7 @@ https://www.silabs.com/documents/public/data-sheets/CP2102-9.pdf<br>
 
 Although it may be instinctive to ensure that all "arcade" cores support JVS via SNAC, the task would be monumental. Because of that our current approach will make use of JVS emulation over serial, subsequently converted to USB events<br>
 
-## Verified OpenJVS Support
+### Verified OpenJVS Support
 With the help of Bobby Dilly, and Booger we've been able to get a functional example of JVS working in a recent fork of MiSTer. These changes will be packported to the current MiSTer tree, and submitted as a Pull Request in the coming weeks.<br>
 [![OpenJVS Discord](https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/openjvs.jpg)](https://discord.com/invite/aJAR9N2)<br>
 
