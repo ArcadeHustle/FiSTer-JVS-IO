@@ -56,7 +56,7 @@ Enter the DoubleFister, a single IO board with the intent of supporting two JVS 
 <img width="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/Teasers/One.png"><br>
 <img width="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/Teasers/Three.png"><br>
 
-Once we complete the hardware testing phases, we will push for some software additions as well. If you would like to be a beta tester, please contact @d0tslash, or @fsckewe, or @JaviRodasG via Twitter. 
+Once we complete the hardware testing phases, we will push for some software additions as well. If you would like to be a beta tester, please contact [@d0tslash](https://twitter.com/d0tslash), [@fsckewe](https://twitter.com/fsckewe), or [@JaviRodasG](https://twitter.com/JaviRodasG) via Twitter. 
 
 ## Service core 
 Nearly every arcade PCB in existance has a "test" / "service" menu in which various settings can be changed, and I/O can be checked. 
