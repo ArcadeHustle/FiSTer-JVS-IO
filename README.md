@@ -3,7 +3,7 @@
 <img height="200" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/fist.jpg"><br>
 
 - [FiSTer-JVS-IO](#fister-jvs-io)
-  * [A project to enable JVS IO support for MiSTer FPGA *family*](#a-project-to-enable-jvs-io-support-for-mister-fpga--family-)
+  * [A project to enable JVS IO support for MiSTer FPGA *family*](#a-project-to-enable-jvs-io-support-for-mister-fpga-family)
   * [RS485 hardware for JVS Support integration](#rs485-hardware-for-jvs-support-integration)
   * [Verified OpenJVS Support](#verified-openjvs-support)
 - [What's next?](#whats-next)
