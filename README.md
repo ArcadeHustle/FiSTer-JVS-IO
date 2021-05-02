@@ -74,7 +74,8 @@ Similarly in the service menu most arcade PCBs have a coin setting that allows f
 
 # Why FiSTer?
 
-Forever instigating shit that enrages randos!
-Frankly, I see through everything, Rysha!
-Fuck, I sure think emulation rocks!
-Finally, I see the evasive racism...
+Forever instigating shit that enrages randos!<br>
+Frankly, I see through everything, Rysha!<br>
+Fuck, I sure think emulation rocks!<br>
+Finally, I see the evasive racism...<br>
+
