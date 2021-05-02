@@ -4,12 +4,7 @@
 
 - [FiSTer-JVS-IO](#fister-jvs-io)
       - [A project to enable JVS IO support for MiSTer FPGA *family*](#a-project-to-enable-jvs-io-support-for-mister-fpga--family-)
-    + [RS485 hardware options for JVS Support integration](#rs485-hardware-options-for-jvs-support-integration)
-    + [Serial Native Accessory Converter via User Port (Serial IO)](#serial-native-accessory-converter-via-user-port--serial-io-)
-      - [add-on](#add-on)
-    + [RS485 to HID](#rs485-to-hid)
-    + [RS485 to UART](#rs485-to-uart)
-  * [What do I buy to help out with development!?](#what-do-i-buy-to-help-out-with-development--)
+    + [RS485 hardware for JVS Support integration](#rs485-hardware-for-jvs-support-integration)
   * [Verified OpenJVS Support](#verified-openjvs-support)
 - [What's next?](#what-s-next-)
   * [Service core](#service-core)
@@ -17,96 +12,28 @@
   * [Coin settings](#coin-settings)
 
 #### A project to enable JVS IO support for MiSTer FPGA *family*
-Now that the community is addressing JAMMA input, [MiSTer FPGA](https://github.com/MiSTer-devel/Main_MiSTer/wiki) is in need of proper arcade support via JVS. 
+Now that the community is addressing JAMMA input, [MiSTer FPGA](https://github.com/MiSTer-devel/Main_MiSTer/wiki) is in need of proper arcade support via [JVS](https://wiki.arcadeotaku.com/w/JVS). If you are here searcing for MiSTercade or JAMMA info, you are in the wrong place. Please see [MiSTercade review by MAVProxyUser](https://github.com/MAVProxyUser/MiSTercade-Review), a candid review of MiSTercade hardware in MiSTer landscape.br>
 
-### RS485 hardware options for JVS Support integration
-FiSTer-JVS-IO will need to be compatible with the standard [MiSTer IO-Board](https://github.com/MiSTer-devel/Main_MiSTer/wiki/IO-Board) in order to make use of the 3.5mm audio, and VGA outputs. This could change in the future as the project becomes less dependent on the existing landscape. 
-
-Current MiSTer DB9 support is done via standard RS232 signaling, which triggers the need for an adapter for 5 volt logic. The [Accessory converter](https://github.com/blue212/SNAC) by Blue212 serves this purpose. JVS is based on RS485 so it will require a similar level shift from 3v to 5v if we make use of the User IO port.<br>
-<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/rs232_rs485.jpg">
-
-We are familiar with using either a Maxim MAX485, MAX3485, or MaxLinear SP485, SP3485, and LT1785 for the task of converting RS485 to RS232 signaling. In this form MiSTer can hopefully handle JVS via SNAC with minor code changes.  
-https://datasheets.maximintegrated.com/en/ds/MAX1487-MAX491.pdf<br>
-https://www.maxlinear.com/ds/sp483-sp485.pdf
-https://www.analog.com/media/en/technical-documentation/data-sheets/LT1785-1785A-1791-1791A.pdf
-
-### Serial Native Accessory Converter via User Port (Serial IO)
-[SNAC](https://github.com/MiSTer-devel/Main_MiSTer/wiki/User-Port-(Serial-IO)) seems completely up to the task, however odd lines in the development sandbox prevent SNAC from having full access to MiSTer's menuing system. 
-One approach would be to make use of a patched user_io subsystem as mentioned in the Atari-Forum thread ["How to use the menu with SNAC controllers and other USER_IO controller solutions"](https://www.atari-forum.com/viewtopic.php?t=38453).
-
-This approach *would likely* require yet another fork to be maintained due to staunch development guidelines for "official" cores. Full support of each core would require internal MiSTer integration of RS485 routines. Antonio Villena's [MiSTer_DB9](https://github.com/antoniovillena/MiSTer_DB9) has already addressed these same sort of integration issues in it's [environment](https://github.com/MiSTer-DB9/Forks_MiSTer/blob/35b7b7f3831a526fb9c18ab31eb29a61545fb18b/fork_ci_template/README%20DB9%20Support.md). Viewing the [initial import](https://github.com/MiSTer-DB9/Main_MiSTer/pull/1/files) of Antonio Villena's DB9 work gives a better idea of what is required to modify the core of MiSTer to potentially support native JVS over SNAC.
-
-Although it may be instinctive to ensure that all "arcade" cores support JVS via SNAC, the task will be monumental. To start we would be more than happy to simply have the existing SNAC [supported cores](https://github.com/MiSTer-devel/Main_MiSTer/wiki/Frequently-Asked-Questions#what-are-the-methods-for-connecting-controllers-to-the-serial-port-of-the-io-add-on-board) to be functional. 
-The wording "Supporting cores (SNES, Genesis, NES, and TG16) allow to directly connect original controllers", could be applied to JVS support, and in essence make any JVS capable arcade platform an "original controller". The Sega Net City, and Naomi Universal line are perfect examples of JVS cabinets. Taito Viewlix, and Chewlix clones would be another example of potential candidate "controllers".
-
+The Sega Net City, and Naomi Universal line are perfect examples of JVS cabinets. Taito Viewlix, and Chewlix clones would be another example of potential candidate JVS "controllers".<br>
 <img width="200" height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/netcity.jpg"><img width="200" height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/viewlix.jpg">
 
-#### add-on
+### RS485 hardware for JVS Support integration
+The FiSTer-JVS-IO concept is now in the standalone prototype phase, it will no longer require any other IO boards. Our original intent was to make use of [SNAC](https://github.com/MiSTer-devel/Main_MiSTer/wiki/User-Port-(Serial-IO)) as a means to bring the most accurate JVS experience to MiSTerFPGA possible. Due to the required 5v logic for RS485 we considered simply making a variant of the [Accessory converter](https://github.com/blue212/SNAC) by Blue212. JVS is based on serial logic so it would require a level shift from 3v to 5v if we truly wanted to make use of the User IO port.<br>
+<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/rs232_rs485.jpg">
 
-In examining Antonio's IO-2-DB9 example we can see all the elements we need to make an RS485 add on board.  
-https://github.com/antoniovillena/MiSTer_DB9/blob/master/Hardware/io2db9.brd
-https://github.com/antoniovillena/MiSTer_DB9/blob/master/Hardware/io2db9.sch
+Historically we would use either a Maxim MAX485, MAX3485, MaxLinear SP485, SP3485, or LT1785 for the task of converting RS485 to proper RS232 signaling. Through the help of a CP2102 USB to serial SoC we can enable MiSTer to handle JVS without the need for SNAC. Best of all we can do so with only minor code changes.<br>
+https://datasheets.maximintegrated.com/en/ds/MAX1487-MAX491.pdf<br>
+https://www.maxlinear.com/ds/sp483-sp485.pdf<br>
+https://www.analog.com/media/en/technical-documentation/data-sheets/LT1785-1785A-1791-1791A.pdf<br>
+https://www.silabs.com/documents/public/data-sheets/CP2102-9.pdf<br>
 
-You can clearly see that Serial 0, and Serial 1 are represented by pins AH9+AG11, and AF13+AG13
-<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/io2db9.png"><br>
-<img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/userio.png"><br>
-
-These pin names in turn correspond with an Arduino pin map. For example Arduino_IO14 is PIN_AH9, aka USER_IO[1], or D- on the SNAC USB board!
-<img height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/pinout.png"><img height="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/snacusb.png"><br>
-
-[Examples:](https://misterfpga.org/viewtopic.php?t=1528)
-```
-Arduino_IO15 AG11  USER_IO[0]
-Arduino_IO14 AH9   USER_IO[1]
-Arduino_IO13 AH12  USER_IO[2]
-...
-Arduino_IO8 AF17   USER_IO[6]
-```
-
-The connection flow appears to be as follows (confirmation needed):
-```
-[MiSTer]                  [RS485 IC]              [USB3 TypeA]      [Sega 837-13551 JVS IO]
-AG11 USERIO[0] (3.3v) <-> RO (UART_RX, JVS A) <-> Data+ (Pin 3) <-> A+  (Green)
-AH9  USERIO[1] (3.3v) <-> DI (UART_TX, JVS B) <-> Data- (Pin 2) <-> B-  (White)
-GND		      <-> GND                 <-> GND   (Pin 7  <-> GND (Black)
-```
-
-### RS485 to HID
-Converting directly to HID keyboard output is a potential option. At the very least [Input.cpp](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/input.cpp) from Main_MiSTer would need to be patched to parse JVS frames using their start/stop bits. Building a new parser may not be trivial, but is certainly possible. 
-The WCH CH9328 is a suitable hardware choice for getting input to MiSTer, in this case from RS485, to HID.<br>
-http://www.wch.cn/product/ch9328.html<br>
-http://www.wch-ic.com/products/CH9328.html<br>
-http://www.wch.cn/downloads/file/224.html
-
-### RS485 to UART
-Perhaps the easiest option is to make use of an RS485 to RS232 board with a built in USB bridge, as folks have done for years with bootleg Taito X2, and X3 machines. 
-[![Poor Mans JVS](http://img.youtube.com/vi/kqXEYtvGzno/0.jpg)](https://www.youtube.com/watch?v=kqXEYtvGzno)<br>
-
-## What do I buy to help out with development!? 
-
-Three commercial products give us a chance to play with this theory of JVS operations alongside MiSTer.<br>
-
-SNAC to USB:<br>
-https://github.com/blue212/SNAC/blob/master/snac/snac-usb_partlist.txt<br>
-https://github.com/blue212/SNAC/tree/master/snac/gerbers/snac_usb3<br>
-https://misterfpga.co.uk/product/snac-serial-native-accessory-converter-usb3-version-bare-pcb/<br>
-
-RS485 to HID:<br>
-https://www.amazon.com/RS485-Serial-Keyboard-Protocol-CH9328/dp/B083XR42KT<br>
-
-RS485 to RS232:<br>
-https://www.amazon.com/gp/product/B078X5H8H7/<br>
-
-RS485 breakout:<br>
-https://www.sparkfun.com/products/10124<br>
-
-USB 3.1 Type A Male Plug Breakout Board:<br>
-https://www.amazon.com/gp/product/B01MRK0REP/<br>
+Although it may be instinctive to ensure that all "arcade" cores support JVS via SNAC, the task would be monumental. Because of that our current approach will make use of JVS emulation over serial, subsequently converted to USB events<br>
 
 ## Verified OpenJVS Support
+With the help of Bobby Dilly, and Booger we've been able to get a functional example of JVS working in a recent fork of MiSTer. These changes will be packported to the current MiSTer tree, and submitted as a Pull Request in the coming weeks.<br>
 [![OpenJVS Discord](https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/openjvs.jpg)](https://discord.com/invite/aJAR9N2)<br>
 
-Either way JVS will need to be parsed per the spec, and converted to input suitable for MiSTer:<br>
+Our main requirement was that JVS needed to be parsed per the spec, and converted to input suitable for MiSTer:<br>
 [JAMMA Video Standard (JVS) Third Edition](http://daifukkat.su/files/jvs_wip.pdf)<br>
 [JAMMA VIDEO規格(第3版)](http://superusr.free.fr/arcade/JVS/JVST_VER3.pdf)
 
@@ -117,7 +44,14 @@ We were right, and it did, it pretty well worked out the box our first try! We o
 <img src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/jvscore.jpg">
 
 # What's next? 
-How do we mature the MiSTer landscape further for arcade use? What do we need? 
+How do we mature the MiSTer landscape further for arcade use? What do we need? Well we obviously couldn't stop with the progress we made above. We needed something better than the generic USB RS485 adapter that we were currently using. Many of the theoretical design discussions have been tamped down, and in turn solidified into a final design [concept](https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/DoubleFiSTer.txt).
+
+Enter the DoubleFister, a single IO board with the intent of supporting two JVS arcade cabinets for simultaneous play.<br>
+<img width="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/Teasers/Two.png">
+<img width="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/Teasers/One.png">
+<img width="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/Teasers/Three.png">
+
+Once we complete the testing phases, we will push for some software additions as well.
 
 ## Service core 
 Nearly every arcade PCB in existance has a "test" / "service" menu in which various settings can be changed, and I/O can be checked. 
