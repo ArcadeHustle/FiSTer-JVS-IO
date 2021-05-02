@@ -34,7 +34,7 @@ https://www.silabs.com/documents/public/data-sheets/CP2102-9.pdf<br>
 Although it may be instinctive to ensure that all "arcade" cores support JVS via SNAC, the task would be monumental. Because of that our current approach will make use of JVS emulation over serial, subsequently converted to USB events.<br>
 
 ### Verified OpenJVS Support
-With the help of both Bobby Dilly, and Booger we've been able to get a functional example of JVS working in a recent fork of MiSTer. These changes will be packported to the current MiSTer tree, and submitted as a Pull Request in the coming weeks.<br>
+With the help of both Bobby Dilly, and Booger we've been able to get a functional example of JVS working in a recent fork of MiSTer. These changes will be backported to the current MiSTer tree, and submitted as a Pull Request in the coming weeks.<br>
 [![OpenJVS Discord](https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/openjvs.jpg)](https://discord.com/invite/aJAR9N2)<br>
 
 Our main requirement was that JVS needed to be parsed per the spec, and converted to input suitable for MiSTer:<br>
