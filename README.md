@@ -25,7 +25,7 @@ The FiSTer-JVS-IO concept is now in the standalone prototype phase, it will no l
 
 Although we've not completely abandoned this path, we will be backburnering it for now as we focus on a USB based solution that fits more into the MiSTer landscape. It may be instinctive to ensure that all "arcade" cores support JVS via SNAC, the task would however be monumental. Because of that our current approach will make use of JVS emulation over serial, subsequently converted to USB events.<br>
 
-Historically we would use either a Maxim MAX485, MAX3485, MaxLinear SP485, SP3485, or LT1785 for the task of converting RS485 to proper RS232 signaling. Through the help of a CP2102 USB to serial SoC we can enable MiSTer to handle JVS without the need for SNAC. Best of all we can do so with only minor code changes.<br>
+Historically we would use either a Maxim MAX485, MAX3485, MaxLinear SP485, SP3485, or LT1785 for the task of converting RS485 to proper RS232 signaling. By using a CP2102 USB to serial SoC, alongside the RS485 transciever we can enable MiSTer to handle JVS without the need for SNAC. Best of all we can do so with only minor code changes.<br>
 https://datasheets.maximintegrated.com/en/ds/MAX1487-MAX491.pdf<br>
 https://www.maxlinear.com/ds/sp483-sp485.pdf<br>
 https://www.analog.com/media/en/technical-documentation/data-sheets/LT1785-1785A-1791-1791A.pdf<br>
