@@ -1,6 +1,6 @@
 # FiSTer-JVS-IO 
 
-<img height="200" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/fist.jpg"><br>
+[![civil discourse](https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/fist.jpg)](https://en.wikipedia.org/wiki/1968_Olympics_Black_Power_salute)<br>
 
 - [FiSTer-JVS-IO](#fister-jvs-io)
   * [A project to enable JVS IO support for MiSTer FPGA *family*](#a-project-to-enable-jvs-io-support-for-mister-fpga-family)
