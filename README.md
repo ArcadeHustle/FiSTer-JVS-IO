@@ -51,6 +51,7 @@ We were right, and it did, it pretty well worked out the box our first try! We o
 # What's next? 
 How do we mature the MiSTer landscape further for arcade use? What do we need? Well we obviously couldn't stop with the progress we made above. We needed something better than the generic USB RS485 adapter that we were currently using. Many of the theoretical design discussions have been tamped down, and in turn solidified into a final design [concept](https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/DoubleFiSTer.txt).
 
+## Double Fister
 Enter the DoubleFister, a single IO board with the intent of supporting two JVS arcade cabinets for simultaneous play. It will feature dual VGA, 3.5mm, and RCA outputs, dual JVS input, and a scriptable JVS injection button. (used to manually coin up, for now!) <br>
 
 <img width="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/Teasers/Two.png"><br>
@@ -58,6 +59,30 @@ Enter the DoubleFister, a single IO board with the intent of supporting two JVS 
 <img width="400" src="https://github.com/ArcadeHustle/FiSTer-JVS-IO/blob/main/Teasers/Three.png"><br>
 
 Once we complete the hardware testing phases, we will push for some software additions as well. If you would like to be a beta tester, please contact [@d0tslash](https://twitter.com/d0tslash), [@fsckewe](https://twitter.com/fsckewe), or [@JaviRodasG](https://twitter.com/JaviRodasG) via Twitter. 
+
+## Single Fist
+[SNAC](https://github.com/MiSTer-devel/Main_MiSTer/wiki/User-Port-(Serial-IO)) seems completely up to the task, however odd lines in the development sandbox prevent SNAC from having full access to MiSTer's menuing system. 
+One approach would be to make use of a patched user_io subsystem as mentioned in the Atari-Forum thread ["How to use the menu with SNAC controllers and other USER_IO controller solutions"](https://www.atari-forum.com/viewtopic.php?t=38453).<br>
+
+This approach *would likely* require yet another fork to be maintained due to staunch development guidelines for "official" cores. Full support of each core would require internal MiSTer integration of RS485 routines. Antonio Villena's [MiSTer_DB9](https://github.com/antoniovillena/MiSTer_DB9) has already addressed these same sort of integration issues in it's [environment](https://github.com/MiSTer-DB9/Forks_MiSTer/blob/35b7b7f3831a526fb9c18ab31eb29a61545fb18b/fork_ci_template/README%20DB9%20Support.md). Viewing the [initial import](https://github.com/MiSTer-DB9/Main_MiSTer/pull/1/files) of Antonio Villena's DB9 work gives a better idea of what is required to modify the core of MiSTer to potentially support native JVS over SNAC.<br>
+
+In examining Antonio's IO-2-DB9 example we can see all the elements we need to make an RS485 add on board.<br>
+https://github.com/antoniovillena/MiSTer_DB9/blob/master/Hardware/io2db9.brd<br>
+https://github.com/antoniovillena/MiSTer_DB9/blob/master/Hardware/io2db9.sch<br>
+
+The connection flow for a direct JVS connection to the USER IO appears to be as follows (confirmation needed):<br>
+```
+[MiSTer]                  [RS485 IC]              [USB3 TypeA]      [Sega 837-13551 JVS IO]
+AG11 USERIO[0] (3.3v) <-> RO (UART_RX, JVS A) <-> Data+ (Pin 3) <-> A+  (Green)
+AH9  USERIO[1] (3.3v) <-> DI (UART_TX, JVS B) <-> Data- (Pin 2) <-> B-  (White)
+GND		      <-> GND                 <-> GND   (Pin 7  <-> GND (Black)
+```
+
+The Blue212 SNAC Adapter could easily be modified to handle this task. Adding an RS485 transciever will allow for existing serial / DB9 code to be reused for core control support. 
+https://github.com/blue212/SNAC/blob/master/snac/snac-usb_partlist.txt<br>
+https://github.com/blue212/SNAC/tree/master/snac/gerbers/snac_usb3<br>
+
+Although it may be instinctive to ensure that all "arcade" cores support JVS via SNAC, the task will be monumental. To start we would be more than happy to simply have the existing SNAC [supported cores](https://github.com/MiSTer-devel/Main_MiSTer/wiki/Frequently-Asked-Questions#what-are-the-methods-for-connecting-controllers-to-the-serial-port-of-the-io-add-on-board) to be functional (SNES, Genesis, NES, and TG16). 
 
 ## Service core 
 Nearly every arcade PCB in existance has a "test" / "service" menu in which various settings can be changed, and I/O can be checked. 
