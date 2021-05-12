@@ -101,7 +101,7 @@ Similarly in the service menu most arcade PCBs have a coin setting that allows f
 
 # Why FiSTer?
 
-Several acronyms apply! The real reason however, is because the main supported project is <i><b>M<b><i>iSTer, dropping a letter and going with a common sounding rhyme was all too easy none the less. 
+Several acronyms apply! The real reason however, is because the main supported project is <i><b>M</b></i>iSTer, dropping a letter and going with a common sounding rhyme was all too easy none the less. 
 
 Forever instigating shit that enrages randos!<br>
 Frankly, I see through everything, Rysha!<br>
@@ -111,7 +111,7 @@ Finally, I see the evasive racism...<br>
 ## Why Double FiSTer!?
 
 <b>TOP DEFINITION</b><br>
-<i>double fisting<i><br>
+<i>double fisting</i><br>
 Expression used to describe somebody at a party, bar or restaurant, holding two drinks, one in each hand. Unlike single fisting, which most people do.<br>
 https://www.urbandictionary.com/define.php?term=double%20fisting<br>
 
