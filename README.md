@@ -105,3 +105,9 @@ Frankly, I see through everything, Rysha!<br>
 Fuck, I sure think emulation rocks!<br>
 Finally, I see the evasive racism...<br>
 
+## Why Double FiSTer!?
+
+<b>TOP DEFINITION</b><br>
+<i>double fisting<i><br>
+Expression used to describe somebody at a party, bar or restaurant, holding two drinks, one in each hand. Unlike single fisting, which most people do.<br>
+https://www.urbandictionary.com/define.php?term=double%20fisting
