@@ -12,6 +12,7 @@
   * [IO test core](#io-test-core)
   * [Coin settings](#coin-settings)
 - [Why FiSTer?](#why-fister)
+- [Why Double FiSTer!?](#why-double-fister)
 
 ## A project to enable JVS IO support for MiSTer FPGA *family*
 Now that the community is addressing JAMMA input, [MiSTer FPGA](https://github.com/MiSTer-devel/Main_MiSTer/wiki) is in need of proper arcade support via [JVS](https://wiki.arcadeotaku.com/w/JVS). If you are here searcing for [MiSTercade](https://misteraddons.com/products/mistercade) or JAMMA info, you are in the wrong place. Please see [MiSTercade review by MAVProxyUser](https://github.com/MAVProxyUser/MiSTercade-Review), a candid review of MiSTercade hardware in MiSTer landscape.<br>
