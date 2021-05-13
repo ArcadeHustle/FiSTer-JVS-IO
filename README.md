@@ -84,7 +84,7 @@ The Blue212 SNAC Adapter could easily be modified to handle this task. Adding an
 https://github.com/blue212/SNAC/blob/master/snac/snac-usb_partlist.txt<br>
 https://github.com/blue212/SNAC/tree/master/snac/gerbers/snac_usb3<br>
 
-Although it may be instinctive to ensure that all "arcade" cores support JVS via SNAC, the task will be monumental. To start we would be more than happy to simply have the existing SNAC [supported cores](https://github.com/MiSTer-devel/Main_MiSTer/wiki/Frequently-Asked-Questions#what-are-the-methods-for-connecting-controllers-to-the-serial-port-of-the-io-add-on-board) to be functional (SNES, Genesis, NES, and TG16). 
+To start we would be more than happy to simply have the existing SNAC [supported cores](https://github.com/MiSTer-devel/Main_MiSTer/wiki/Frequently-Asked-Questions#what-are-the-methods-for-connecting-controllers-to-the-serial-port-of-the-io-add-on-board) to be functional (SNES, Genesis, NES, and TG16).
 
 ## Service core 
 Nearly every arcade PCB in existance has a "test" / "service" menu in which various settings can be changed, and I/O can be checked. 
